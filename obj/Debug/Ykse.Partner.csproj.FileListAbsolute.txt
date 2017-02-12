@@ -1,0 +1,10 @@
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\Ykse.Partner.dll
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\Ykse.Partner.pdb
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\obj\Debug\Ykse.Partner.dll
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\obj\Debug\Ykse.Partner.pdb
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\MySql.Data.dll
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\log4net.dll
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\Newtonsoft.Json.dll
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\log4net.pdb
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\log4net.xml
+D:\程式\GitHubProject\C#\Ykse.Partner\Ykse.Partner\bin\Debug\Newtonsoft.Json.xml

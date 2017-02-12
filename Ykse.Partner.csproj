@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{10D38409-A794-4890-81F4-353ED756E31A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ykse.Partner</RootNamespace>
+    <AssemblyName>Ykse.Partner</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>C:\Users\ragena\Downloads\log4net-2.0.7-bin-newkey\log4net-2.0.7\bin\net\4.5\release\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attribute\FinalValueAttribute.cs" />
+    <Compile Include="Core\RunTime.cs" />
+    <Compile Include="Data\IMainElapsedAction.cs" />
+    <Compile Include="Data\Result.cs" />
+    <Compile Include="Enum\DataFormat.cs" />
+    <Compile Include="Log\IntervalLogger.cs" />
+    <Compile Include="Log\LogLevel.cs" />
+    <Compile Include="Log\LogRecord.cs" />
+    <Compile Include="Misc\Any.cs" />
+    <Compile Include="Misc\Checker.cs" />
+    <Compile Include="Misc\Constants.cs" />
+    <Compile Include="Misc\Converter\FromEnum.cs" />
+    <Compile Include="Misc\Converter\FromString.cs" />
+    <Compile Include="Misc\Extender.cs" />
+    <Compile Include="Misc\IsExtender.cs" />
+    <Compile Include="Misc\IsTo\IToInterceptor.cs.cs" />
+    <Compile Include="Misc\IsTo\ToInterceptor.cs" />
+    <Compile Include="Misc\IsTo\IsToConfig.cs" />
+    <Compile Include="Misc\IsTo\IsToConstants.cs" />
+    <Compile Include="Misc\Reflector.cs" />
+    <Compile Include="Misc\To\ToCache.cs" />
+    <Compile Include="Misc\To\ToExtender.cs" />
+    <Compile Include="Misc\To\ToHelper.cs" />
+    <Compile Include="Misc\To\TryFromArray.cs" />
+    <Compile Include="Misc\To\TryFromBoolean.cs" />
+    <Compile Include="Misc\To\TryFromByte.cs" />
+    <Compile Include="Misc\To\TryFromChar.cs" />
+    <Compile Include="Misc\To\TryFromClass.cs" />
+    <Compile Include="Misc\To\TryFromDateTime.cs" />
+    <Compile Include="Misc\To\TryFromDecimal.cs" />
+    <Compile Include="Misc\To\TryFromDouble.cs" />
+    <Compile Include="Misc\To\TryFromEnum.cs" />
+    <Compile Include="Misc\To\TryFromInt16.cs" />
+    <Compile Include="Misc\To\TryFromInt32.cs" />
+    <Compile Include="Misc\To\TryFromInt64.cs" />
+    <Compile Include="Misc\To\TryFromInterface.cs" />
+    <Compile Include="Misc\To\TryFromIntPtr.cs" />
+    <Compile Include="Misc\To\TryFromSByte.cs" />
+    <Compile Include="Misc\To\TryFromSingle.cs" />
+    <Compile Include="Misc\To\TryFromStream.cs" />
+    <Compile Include="Misc\To\TryFromString.cs" />
+    <Compile Include="Misc\To\TryFromStruct.cs" />
+    <Compile Include="Misc\To\TryFromUInt16.cs" />
+    <Compile Include="Misc\To\TryFromUInt32.cs" />
+    <Compile Include="Misc\To\TryFromUInt64.cs" />
+    <Compile Include="Misc\To\TryFromUIntPtr.cs" />
+    <Compile Include="Misc\To\TypeCategory.cs" />
+    <Compile Include="Misc\To\XInfo.cs" />
+    <Compile Include="Parallel\SafeList.cs" />
+    <Compile Include="Provider\DataApi.cs" />
+    <Compile Include="Provider\Interface\IDataApi.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Provider\ProviderSettings.cs" />
+    <Compile Include="Data\DataResult.cs" />
+    <Compile Include="Symbol.cs" />
+    <Compile Include="Timing.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
