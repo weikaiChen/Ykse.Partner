@@ -1,17 +1,14 @@
-﻿// Copyright (c) Yuanta Securities. All rights reserved.
-// Modified By      YYYY-MM-DD
-// CK               2014-08-04 - Creation
+﻿
 
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
-
 namespace Ykse.Partner
 {
 	[Serializable, DataContract]
 	public class Result
-		: EventArgs, IMainElapsedAction
+		:  EventArgs, IMainElapsedAction
 	{
 		protected object _Lock = new object();
 		private Exception _Exception;

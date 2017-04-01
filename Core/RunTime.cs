@@ -47,6 +47,10 @@ namespace Ykse.Partner
 				}
 			}
 		}
+
+
+	
+
 		#endregion
 		public static StackFrame CalleeStackFrameBeyond(string partialName)
 		{

@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Ykse.Partner
 {
-	public class IntervalLogger:Timing
+	public class IntervalLogger : Timing
 	{
 		public LogRecord Record { get; private set; }
 		public MethodBase Method { get; private set; }
@@ -49,6 +49,16 @@ namespace Ykse.Partner
 						: this.Record.Title;
 				this.Record.Method = this.Method;
 			}
+		}
+
+
+		public override void AfterDispose()
+		{
+			//if(null != Action) { Action.MainAccumulating(Elapsed); }
+			Record.ExecutionTime = Elapsed;
+			Record.Write();
+		
+			GC.SuppressFinalize(this);
 		}
 	}
 

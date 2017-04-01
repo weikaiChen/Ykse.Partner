@@ -40,7 +40,11 @@ namespace Ykse.Partner
 			return JsonConvert.SerializeObject(obj, formatting);
 		}
 
-
+		public static string ToJson(
+		this object obj)
+		{
+			return obj.ToJson(Newtonsoft.Json.Formatting.None);
+		}
 		#region MethodBase
 		public static string GetFriendlyName(this Type type)
 		{

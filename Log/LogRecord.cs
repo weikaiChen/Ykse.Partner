@@ -66,6 +66,17 @@ namespace Ykse.Partner
 		public LogLevel Level { get; set; }
 
 
+		[Category(TIME)]
+		[DataMember]
+		[Description("執行時間長度")]
+		public double ExecutionTime { get; set; }
+
+
+		[Category(DATAS)]
+		[DataMember]
+		[Description("額外資訊")]
+		public SafeList<Any> Datas { get; set; }
+
 		public MethodBase Method { get; internal set; }
 
 		#endregion
@@ -105,6 +116,27 @@ namespace Ykse.Partner
 		#region private
 		private void Init()
 		{
+
+			Title = string.Empty;
+
+			Level = LogLevel.Info;
+
+			ExecutionTime = 0L;
+
+			Message = string.Empty;
+			Datas = new SafeList<Any>();
+
+
+			// MethodBase
+			var sf = RunTime.CalleeStackFrameBeyond("LogRecord");
+			if(null != sf) {
+				this.Method = sf.GetMethod();
+				Path = this.Method.Path();
+				Title = Title.NullOrEmpty()
+					? this.Method.Description()
+					: Title;
+			}
+
 		}
 		#endregion
 
@@ -132,7 +164,8 @@ namespace Ykse.Partner
 		{
 			try {
 				var json = this.ToJson(Formatting.Indented);
-				XmlConfigurator.Configure(new System.IO.FileInfo(@"D:\\程式\GitHubProject\\C#\\Ykse.Partner\\TestConnection\\bin\\Debug\\log4net.xml"));
+				var path = LogSettings.GetPath();
+				XmlConfigurator.Configure(new System.IO.FileInfo(path));
 				//XmlConfigurator.Configure(file);
 				Level = level;
 				switch(Level) {
